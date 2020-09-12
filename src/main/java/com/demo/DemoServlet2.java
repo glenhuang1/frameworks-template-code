@@ -21,7 +21,6 @@ public class DemoServlet2 extends HttpServlet {
         String cookie1string = "no cookie1 so far.";
         String cookie2string = "no cookie2 so far.";
 
-        //获取cookie
         Cookie[] cookies = request.getCookies();
         if (cookies == null) {
             System.out.println("---no cookie is existing! Adding new session Start---");
@@ -45,7 +44,7 @@ public class DemoServlet2 extends HttpServlet {
             System.out.println("---no cookie is existing! Adding new session End---");
 
         } else {
-            //循环所有的cookie
+
             for(Cookie cookie:cookies){
                 if (cookie.getName().equals("cookie1_key")) {
                     cookie1string = cookie.getValue();
